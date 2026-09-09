@@ -1,7 +1,7 @@
 --Qual foi o total de receitas no ano de 1997?
 
 --Perfeita. Melhor performance.
-CREATE VIEW CREATE VIEW vw_total_receita_1997_view AS
+CREATE VIEW vw_total_receita_1997_view AS
 SELECT 
 	ROUND(CAST(SUM((od.unit_price) * od.quantity * (1.0 - od.discount)) AS NUMERIC), 2) AS Receita
 FROM order_details od
@@ -12,7 +12,7 @@ WHERE o.order_date >= '1997-01-01'
 
 -- Faça uma análise de crescimento mensal e o cálculo de acumulado no ano
 
-CREATE VIEW vw_receita_mensal_acumulada
+CREATE VIEW vw_receita_mensal_acumulada AS
 WITH RECEITA_MENSAL AS (
 	SELECT
 		EXTRACT( YEAR FROM o.order_date) AS Ano
