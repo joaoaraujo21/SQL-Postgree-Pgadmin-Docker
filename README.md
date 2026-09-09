@@ -99,3 +99,4 @@ Your modifications to the postgres database(s)will be persisted in the `postgres
 If you need to delete the database data, run `docker-compose down -v` (the database will then be repopulated from scratch when running `docker-compose up`).
 
 If you need to upload any files into your db container, just copy and paste them to the `files` local folder. They will be available at the `/files` path inside the db container.
+
