@@ -88,7 +88,7 @@ ORDER BY
 
 --Agora somente os clientes que estão nos grupos 3, 4 e 5 para que seja feita uma análise de Marketing especial com eles
 
-CREATE VIEW clients_to_marketing AS
+CREATE VIEW vw_clientes_para_marketing AS
 WITH clientes_para_marketing AS (
     SELECT 
     customers.company_name, 
