@@ -109,3 +109,23 @@ ORDER BY
 SELECT *
 FROM clientes_para_marketing
 WHERE group_number >= 3;
+
+
+--Identificar os 10 produtos mais vendidos.
+
+CREATE VIEW top_10_products AS
+WITH topprodutos AS (
+	SELECT 
+		products.product_name
+		,SUM(order_details.unit_price * order_details.quantity * (1.0 - order_details.discount)) AS sales
+		,RANK() OVER (ORDER BY SUM(order_details.unit_price * order_details.quantity * (1.0 - order_details.discount))) TOP
+	FROM products
+	INNER JOIN order_details ON order_details.product_id = products.product_id
+	GROUP BY products.product_name
+	ORDER BY TOP ASC
+) 	
+	SELECT 
+		product_name
+		--,RANK() OVER (ORDER BY sales)
+	FROM topprodutos
+	WHERE TOP <= 10
