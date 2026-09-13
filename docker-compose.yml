@@ -9,10 +9,13 @@ services:
     volumes:
       - postgresql_bin:/usr/lib/postgresql
       - postgresql_data:/var/lib/postgresql
-      - ./northwind.sql:/docker-entrypoint-initdb.d/northwind.sql
-      - ./northwind_index.sql:/docker-entrypoint-initdb.d/northwind_index.sql
-      - ./northwind_views.sql:/docker-entrypoint-initdb.d/northwind_views.sql
-      - ./northwind_views.sql:/docker-entrypoint-initdb.d/northwind_partition.sql
+      - ./northwind.sql:/docker-entrypoint-initdb.d/01_northwind.sql
+      - ./northwind_index.sql:/docker-entrypoint-initdb.d/02_northwind_index.sql
+      - ./northwind_views.sql:/docker-entrypoint-initdb.d/03_northwind_views.sql
+      - ./northwind_partition.sql:/docker-entrypoint-initdb.d/04_northwind_partition.sql
+      - ./northwind_procedures.sql:/docker-entrypoint-initdb.d/05_northwind_procedures.sql
+      - ./northwind_triggers.sql:/docker-entrypoint-initdb.d/06_northwind_triggers.sql
+      - ./northwind_matviews.sql:/docker-entrypoint-initdb.d/07_northwind_matviews.sql
       - ./files:/files
     ports:
       - 55432:5432
