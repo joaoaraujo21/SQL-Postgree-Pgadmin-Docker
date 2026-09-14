@@ -1,7 +1,3 @@
--- Exemplos de funcoes para o banco Northwind.
--- Execute depois de northwind.sql e antes dos demais objetos do banco.
--- Funcoes retornam valores ou conjuntos de linhas e podem ser usadas em SELECT.
-
 -- 1) Calcula o valor liquido de um pedido, considerando desconto.
 -- Exemplo: SELECT fn_total_pedido(10248);
 CREATE OR REPLACE FUNCTION fn_total_pedido(p_order_id smallint)
