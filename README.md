@@ -1,6 +1,6 @@
 # Contexto 
 
-** Banco de Dados Northwind no Postgres com Docker
+** Banco de Dados Northwind no Postgres com Docker. **
 
 O banco de dados Northwind contém os dados de vendas de uma empresa chamada Northwind Traders, que importa e exporta alimentos especiais de todo o mundo.
 
