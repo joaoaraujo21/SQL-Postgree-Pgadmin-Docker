@@ -41,6 +41,7 @@ Pré-requisito: Instale o Docker e Docker Compose
 
  ````bash
 > docker compose up
+ ````
 
 2. Conectar o PgAdmin Acesse o PgAdmin pelo URL: http://localhost:5050, com a senha postgres.
 
@@ -57,9 +58,10 @@ Configure um novo servidor no PgAdmin:
 
  ````bash
  docker compose down
+ ````
 
 4. Arquivos e Persistência Suas modificações nos bancos de dados Postgres serão persistidas no volume Docker postgresql_data e podem ser recuperadas reiniciando o Docker Compose com docker-compose up. Para deletar os dados do banco, execute:
 
  ````bash
  docker compose down -v
- 
+  ````
