@@ -1,6 +1,5 @@
--- Exemplos de materialized views para o banco Northwind.
--- Execute depois de northwind.sql e, de preferencia, depois dos indices.
--- Elas armazenam o resultado fisicamente e precisam de REFRESH para atualizar.
+
+-- Armazenam o resultado fisicamente mas precisam de REFRESH para atualizar.
 
 -- 1) Receita consolidada por produto e categoria.
 -- E adequada para dashboards porque evita recalcular os joins e a soma a cada leitura.

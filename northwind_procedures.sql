@@ -1,6 +1,3 @@
--- Exemplos de procedures para o banco Northwind.
--- Execute depois de northwind.sql.
--- Procedures executam comandos; por isso nao retornam linhas como uma funcao.
 
 -- 1) Reajusta os precos de uma categoria por percentual.
 -- Exemplo: CALL sp_reajustar_precos_categoria(1, 5);

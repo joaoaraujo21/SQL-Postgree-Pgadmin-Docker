@@ -1,5 +1,3 @@
--- Exemplos de triggers para o banco Northwind.
--- Execute depois de northwind.sql.
 
 -- 1) Impede estoque, quantidade e desconto invalidos nos itens dos pedidos.
 CREATE OR REPLACE FUNCTION fn_validar_item_pedido()
